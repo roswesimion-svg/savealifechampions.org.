@@ -10,6 +10,8 @@ export interface ActiveCampaign {
   title: string;
   slug: string;
   description: string;
+  headline: string | null;
+  subtext: string | null;
   category: string;
   hero: {
     imageUrl: string | null;
