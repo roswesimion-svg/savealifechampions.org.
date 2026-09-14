@@ -38,10 +38,13 @@ export default function Hero({ campaign }: { campaign: ActiveCampaign | null }) 
         <div>
           <p className="font-display text-sm uppercase tracking-[0.3em] text-gold">Save A Life Champions</p>
           <h1 className="mt-3 max-w-2xl font-display text-4xl font-semibold leading-tight sm:text-6xl">
-            Together We Make <span className="text-gold">An Impact</span>
+            {campaign?.headline ?? (
+              <>Together We Make <span className="text-gold">An Impact</span></>
+            )}
           </h1>
           <p className="mt-4 max-w-lg text-white/70">
-            {campaign?.description ??
+            {campaign?.subtext ??
+              campaign?.description ??
               "Real people, real support, real change. Donate, earn Champion points, and climb the live leaderboard."}
           </p>
         </div>
